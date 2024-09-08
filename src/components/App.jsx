@@ -1,10 +1,12 @@
-import React from 'react';
-
+import Description from './Description/Description';
+import { FEEDBACK_INVITATION, CAFE_TITLE } from './Utils/Constants';
+import styles from './App.module.css';
 function App() {
   return (
-    <React.Fragment>
-    <p>Sip Happens Café</p>
-    </React.Fragment>
+    <div className={styles.container}>
+      <Description invitation={FEEDBACK_INVITATION}>{CAFE_TITLE}</Description>
+     
+    </div>
   );
 }
 
