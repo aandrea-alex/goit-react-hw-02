@@ -7,6 +7,7 @@ import {
   INIT_COUNTS,
 } from './Utils/Constants';
 import { saveToLocalStorage, getInitial } from './Utils/Local-storage';
+import { getStatistics } from './Utils/Feedback-statistics';
 import styles from './App.module.css';
 
 function App() {
@@ -27,13 +28,16 @@ function App() {
     saveToLocalStorage(counts);
   }, [counts]);
 
+  const statistics = getStatistics(counts);
+  console.log("statistics:", statistics);
+
   return (
     <div className={styles.container}>
       <Description invitation={FEEDBACK_INVITATION}>{CAFE_TITLE}</Description>
       <Options
         onCounts={handleCounts}
         onReset={handleReset}
-        // isResetBtn={statistics.total > 0}
+        isResetBtn={statistics.total > 0}
       />
     </div>
   );
