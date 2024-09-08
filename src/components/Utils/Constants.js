@@ -3,9 +3,9 @@ export const FEEDBACK_INVITATION =
 export const CAFE_TITLE = 'Sip Happens Café';
 export const NOTIFICATION = 'No feedback given yet';
 
-export const KEY_LOCALSTORAGE = 'reviews';
+export const KEY_LOCALSTORAGE = 'counts';
 
-export const INIT_REVIEWS = {
+export const INIT_COUNTS = {
   good: 0,
   neutral: 0,
   bad: 0,
