@@ -6,28 +6,28 @@ import { saveToLocalStorage, getInitial} from './Utils/Local-storage';
 import styles from './App.module.css';
 
 function App() {
-  const [reviews, setReviews] = useState(getInitial);
+  const [counts, setCounts] = useState(getInitial);
 
-  const handleReview = type => {
-    setReviews(prevReviews => ({
-      ...prevReviews,
-      [type]: prevReviews[type] + 1,
+  const handleCounts = type => {
+    setCounts(prevCounts => ({
+      ...prevCounts,
+      [type]: prevCounts[type] + 1,
     }));
   };
 
   const handleReset = () => {
-    setReviews(INIT_COUNTS);
+    prevCounts(INIT_COUNTS);
   };
 
   useEffect(() => {
-    saveToLocalStorage(reviews);
-  }, [reviews]);
+    saveToLocalStorage(counts);
+  }, [counts]);
 
   return (
     <div className={styles.container}>
       <Description invitation={FEEDBACK_INVITATION}>{CAFE_TITLE}</Description>
       <Options
-        onReview={handleReview}
+        onCounts={handleCounts}
         onReset={handleReset}
         // isResetBtn={statistics.total > 0}
       />

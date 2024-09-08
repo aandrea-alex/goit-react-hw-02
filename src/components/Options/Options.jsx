@@ -1,12 +1,12 @@
 import styles from './Options.module.css';
 import OptionButton from './OptionButton';
 
-const Options = ({ onReview, onReset, isResetBtn }) => {
+const Options = ({ onCounts, onReset, isResetBtn }) => {
   return (
     <div className={styles.options}>
-      <OptionButton onClick={() => onReview('good')}>Good</OptionButton>
-      <OptionButton onClick={() => onReview('neutral')}>Neutral</OptionButton>
-      <OptionButton onClick={() => onReview('bad')}>Bad</OptionButton>
+      <OptionButton onClick={() => onCounts('good')}>Good</OptionButton>
+      <OptionButton onClick={() => onCounts('neutral')}>Neutral</OptionButton>
+      <OptionButton onClick={() => onCounts('bad')}>Bad</OptionButton>
       {isResetBtn ? <OptionButton onClick={onReset}>Reset</OptionButton> : null}
     </div>
   );

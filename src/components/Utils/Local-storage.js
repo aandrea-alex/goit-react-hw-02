@@ -1,8 +1,8 @@
 import { KEY_LOCALSTORAGE, INIT_COUNTS } from './Constants';
 
 export const getInitial = () => {
-  const storedReviews = JSON.parse(localStorage.getItem(KEY_LOCALSTORAGE));
-  return storedReviews ? storedReviews : INIT_COUNTS;
+  const storedCounts = JSON.parse(localStorage.getItem(KEY_LOCALSTORAGE));
+  return storedCounts ? storedCounts : INIT_COUNTS;
 };
 
 export const saveToLocalStorage = obj => {
