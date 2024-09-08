@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
 import Description from './Description/Description';
 import Options from './Options/Options';
-import { FEEDBACK_INVITATION, CAFE_TITLE, INIT_COUNTS} from './Utils/Constants';
-import { saveToLocalStorage, getInitial} from './Utils/Local-storage';
+import {
+  FEEDBACK_INVITATION,
+  CAFE_TITLE,
+  INIT_COUNTS,
+} from './Utils/Constants';
+import { saveToLocalStorage, getInitial } from './Utils/Local-storage';
 import styles from './App.module.css';
 
 function App() {
@@ -16,7 +20,7 @@ function App() {
   };
 
   const handleReset = () => {
-    prevCounts(INIT_COUNTS);
+    setCounts(INIT_COUNTS);
   };
 
   useEffect(() => {
