@@ -1,7 +1,7 @@
 import styles from './Options.module.css';
 import OptionButton from './OptionButton';
 
-const Options = ({ onCounts, onReset, isResetBtn = false}) => {
+const Options = ({ onCounts, onReset, isResetBtn = false }) => {
   return (
     <div className={styles.options}>
       <OptionButton onClick={() => onCounts('good')}>Good</OptionButton>

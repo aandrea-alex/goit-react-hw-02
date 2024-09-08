@@ -32,7 +32,6 @@ function App() {
   }, [counts]);
 
   const statistics = getStatistics(counts);
-  console.log("statistics:", statistics);
 
   return (
     <div className={styles.container}>
