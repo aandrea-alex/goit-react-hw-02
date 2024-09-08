@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import Description from './Description/Description';
 import Options from './Options/Options';
+import Feedback from './Feedback/Feedback';
 import {
   FEEDBACK_INVITATION,
   CAFE_TITLE,
@@ -39,6 +40,11 @@ function App() {
         onReset={handleReset}
         isResetBtn={statistics.total > 0}
       />
+       {statistics.total > 0 ? (
+        <Feedback reviews={counts} statistics={statistics}></Feedback>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 }
