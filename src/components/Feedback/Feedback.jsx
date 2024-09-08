@@ -2,7 +2,7 @@ import styles from './Feedback.module.css';
 
 const Feedback = ({ reviews, statistics: { total, positive } }) => {
   return (
-    <div>   
+    <div>
       <ul className={styles.list}>
         {Object.entries(reviews).map(([type, value]) => (
           <li className={styles.item} key={type}>
